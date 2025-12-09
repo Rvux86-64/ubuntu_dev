@@ -5,14 +5,14 @@ TARGET=main.efi
 
 CC=gcc
 
-EFI_INCLUDE_PATH=/usr/local/include/efi
+EFI_INCLUDE_PATH=/usr/local/efi
 EFI_INCLUDES=-I$(EFI_INCLUDE_PATH) -I$(EFI_INCLUDE_PATH)/$(ARCH) -I$(EFI_INCLUDE_PATH)/protocol
 
 CFLAGS=$(EFI_INCLUDES) -fno-stack-protector -fpic \
 		  -fshort-wchar -mno-red-zone -Wall -DEFI_FUNCTION_WRAPPER
 
-LIB_PATH=/usr/local/lib
-EFI_LIB_PATH=/usr/local/lib/
+LIB_PATH=/usr/lib
+EFI_LIB_PATH=/usr/lib/
 EFI_CRT_OBJS=$(EFI_LIB_PATH)/crt0-efi-$(ARCH).o
 EFI_LDS=$(EFI_LIB_PATH)/elf_$(ARCH)_efi.lds
 

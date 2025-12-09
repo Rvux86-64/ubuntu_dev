@@ -6,3 +6,4 @@ cd ./ubuntu_dev
 ./run.sh
 git add .
 git commit -m "ran program"
+git push origin main

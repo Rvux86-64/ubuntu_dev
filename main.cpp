@@ -1,7 +1,7 @@
 extern "C" {
 
 #include "/usr/include/efi/efi.h"
-#include "/usr/include/efilib.h"
+#include "/usr/include/efi/efilib.h"
 
 }
 
